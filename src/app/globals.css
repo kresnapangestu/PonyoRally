@@ -1,0 +1,174 @@
+@import "tailwindcss";
+
+/* `dark:` follows the resolved theme set on <html data-theme>, not the OS. */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+/* ---------- Semantic color tokens ---------- */
+
+:root {
+  --bg: #f5f8f2;
+  --backdrop: #e3ebdc;
+  --surface: #ffffff;
+  --surface-2: #eaf1e4;
+  --border: #d5e2cc;
+  --text: #0e1f17;
+  --text-muted: #4b5f53;
+  --primary: #06402b;
+  --primary-fg: #ffffff;
+  --primary-soft: #2a643d;
+  --accent: #f9f871;
+  --accent-fg: #06402b;
+  --brand-surface: #06402b;
+  --success: #52894c;
+  --warning: #a15c00;
+  --danger: #b42318;
+  --focus: #2a643d;
+  --silver: #dde3e7;
+  --silver-fg: #2f3a40;
+  --bronze: #e7c9a9;
+  --bronze-fg: #5a3a17;
+  --shadow-card: 0 1px 2px rgb(6 64 43 / 0.06), 0 2px 8px rgb(6 64 43 / 0.06);
+  --shadow-sheet: 0 -8px 32px rgb(6 64 43 / 0.16);
+}
+
+[data-theme="dark"] {
+  --bg: #0a1410;
+  --backdrop: #050b08;
+  --surface: #12201a;
+  --surface-2: #1a2c23;
+  --border: #26392f;
+  --text: #eaf2e6;
+  --text-muted: #a3b5a9;
+  --primary: #bad464;
+  --primary-fg: #06402b;
+  --primary-soft: #82af58;
+  --success: #82af58;
+  --warning: #f2b84b;
+  --danger: #f97066;
+  --focus: #f9f871;
+  --silver: #59646b;
+  --silver-fg: #eef2f4;
+  --bronze: #6b4a2b;
+  --bronze-fg: #f6e3cf;
+  /* Shadows vanish on dark surfaces; borders carry elevation instead. */
+  --shadow-card: none;
+  --shadow-sheet: 0 -1px 0 var(--border);
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-backdrop: var(--backdrop);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-border: var(--border);
+  --color-text: var(--text);
+  --color-text-muted: var(--text-muted);
+  --color-primary: var(--primary);
+  --color-primary-fg: var(--primary-fg);
+  --color-primary-soft: var(--primary-soft);
+  --color-accent: var(--accent);
+  --color-accent-fg: var(--accent-fg);
+  --color-brand-surface: var(--brand-surface);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --color-focus: var(--focus);
+  --color-silver: var(--silver);
+  --color-silver-fg: var(--silver-fg);
+  --color-bronze: var(--bronze);
+  --color-bronze-fg: var(--bronze-fg);
+  /* Podium stays on brand green in both themes. */
+  --color-on-brand: #ffffff;
+  --color-on-brand-muted: rgb(255 255 255 / 0.72);
+
+  --shadow-card: var(--shadow-card);
+  --shadow-sheet: var(--shadow-sheet);
+
+  --font-sans: var(--font-funnel), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* ---------- Shape, motion, layout ---------- */
+
+@theme {
+  /* Sampled from the splash artwork's background so wide screens blend in. */
+  --color-splash: #132a27;
+  /* Same idea for the 404 artwork. */
+  --color-not-found: #192f25;
+
+  --radius-input: 10px;
+  --radius-button: 14px;
+  --radius-card: 16px;
+  --radius-sheet: 24px;
+
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+
+  --animate-splash-in: splash-in 600ms var(--ease-standard) both;
+  --animate-fade-out: fade-out 200ms var(--ease-standard) both;
+  --animate-fade-in: fade-in 200ms var(--ease-standard) both;
+  --animate-step-in: step-in 200ms var(--ease-standard) both;
+  --animate-sheet-in: sheet-in 240ms var(--ease-standard) both;
+  --animate-pop-in: pop-in 160ms var(--ease-standard) both;
+  --animate-rise: rise 420ms var(--ease-standard) both;
+
+  @keyframes splash-in {
+    from { opacity: 0; transform: scale(1.04); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  @keyframes fade-out {
+    to { opacity: 0; }
+  }
+  @keyframes fade-in {
+    from { opacity: 0; }
+  }
+  @keyframes step-in {
+    from { opacity: 0; transform: translateX(12px); }
+  }
+  @keyframes sheet-in {
+    from { transform: translateY(100%); }
+  }
+  @keyframes rise {
+    from { transform: scaleY(0.2); opacity: 0; }
+  }
+  @keyframes pop-in {
+    from { opacity: 0; transform: scale(0.92); }
+  }
+}
+
+/* ---------- Base ---------- */
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-backdrop font-sans text-text antialiased;
+    overflow-x: hidden;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 2px;
+  }
+
+  /* Set by the boot script when the splash already played this session. */
+  [data-splash="skip"] .splash {
+    display: none;
+  }
+
+  /* Score digits never shift width as they change. */
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-delay: 0ms !important;
+    transition-duration: 1ms !important;
+  }
+}
