@@ -6,6 +6,7 @@ import sharp from "sharp";
 
 const BRAND = "#06402B";
 const LOGO = "public/brand/court.webp";
+const FAVICON = "public/brand/favicon-ponyo.png";
 
 /** Logo centered on a brand-green square; `fill` is the logo width as a share of the icon. */
 async function icon(size, fill, out) {
@@ -23,4 +24,10 @@ await icon(512, 0.78, "public/icons/icon-512.png");
 // Maskable icons get cropped to a circle on Android: keep the logo inside the safe zone.
 await icon(512, 0.6, "public/icons/maskable-512.png");
 await icon(180, 0.78, "src/app/apple-icon.png");
-await icon(64, 0.84, "src/app/icon.png");
+
+// Browser-tab favicon: the tennis-ball logo, squared on a transparent background.
+await sharp(FAVICON)
+  .resize(192, 192, { fit: "contain", background: { r: 0, g: 0, b: 0, alpha: 0 } })
+  .png()
+  .toFile("src/app/icon.png");
+console.log("wrote src/app/icon.png");
