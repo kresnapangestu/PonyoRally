@@ -33,36 +33,52 @@ export const en: Dictionary = {
     themeDark: "Dark",
     data: "Data",
     exportAll: "Export backup",
-    exportHint: "Save every tournament to one file. Handy before changing phones, or just in case.",
+    exportHint:
+      "Save every tournament to one file. Handy before changing phones, or just in case.",
     importFile: "Import backup",
     importHint: "Restore from a Ponyo Rally backup file (.json).",
     reset: "Delete all data",
     resetHint: "Removes every tournament and setting on this device.",
     resetTitle: "Delete all data?",
-    resetBody: "All tournaments, settings and unfinished forms will be permanently removed from this device. Export a backup first if you still need them.",
+    resetBody:
+      "All tournaments, settings and unfinished forms will be permanently removed from this device. Export a backup first if you still need them.",
     resetConfirm: "Delete everything",
     nothingToExport: "There are no tournaments to export yet.",
-    exported: { one: "{count} tournament exported", other: "{count} tournaments exported" },
+    exported: {
+      one: "{count} tournament exported",
+      other: "{count} tournaments exported",
+    },
     importTitle: "Import backup",
-    importSummary: { one: "This file has {count} tournament.", other: "This file has {count} tournaments." },
-    importConflicts: { one: "{count} of them is already on this device.", other: "{count} of them are already on this device." },
+    importSummary: {
+      one: "This file has {count} tournament.",
+      other: "This file has {count} tournaments.",
+    },
+    importConflicts: {
+      one: "{count} of them is already on this device.",
+      other: "{count} of them are already on this device.",
+    },
     importMerge: "Add the new ones",
     importMergeReplace: "Add and replace matching ones",
     importReplaceAll: "Replace all data",
     importReplaceAllConfirm: "Yes, delete the others and replace",
     importReplaceAllHint: "Other tournaments on this device will be deleted.",
-    imported: { one: "{count} tournament imported", other: "{count} tournaments imported" },
+    imported: {
+      one: "{count} tournament imported",
+      other: "{count} tournaments imported",
+    },
     importErrors: {
       tooLarge: "The file is too large (max 5 MB).",
       notJson: "This file can't be read. Make sure it's a .json file.",
       notBackup: "This isn't a Ponyo Rally backup file.",
-      newerVersion: "This file is from a newer version of the app. Update the app first.",
+      newerVersion:
+        "This file is from a newer version of the app. Update the app first.",
       invalid: "The file is damaged or incomplete.",
       empty: "This backup file is empty.",
       quota: "Storage is full. Delete old tournaments and try again.",
     },
     corruptTitle: "Some data can't be read",
-    corruptBody: "It was set aside so nothing is lost. Download it to keep it, or discard it.",
+    corruptBody:
+      "It was set aside so nothing is lost. Download it to keep it, or discard it.",
     download: "Download",
     discard: "Discard",
     localNote: "All data is stored on this device only, not online.",
@@ -119,7 +135,8 @@ export const en: Dictionary = {
     create: "Create game",
     startOver: "Start over",
     startOverTitle: "Clear everything?",
-    startOverBody: "The format, details and player list you entered will be removed.",
+    startOverBody:
+      "The format, details and player list you entered will be removed.",
     startOverConfirm: "Clear",
     format: {
       whatsDifferent: "What's the difference?",
@@ -143,10 +160,14 @@ export const en: Dictionary = {
       pointsTotal: "Total points per match",
       placeholderRace: "e.g. 4",
       placeholderTotal: "e.g. 24",
-      helpRace: "The first team to reach {target} points wins. Example score: {target}–{other}.",
-      helpRaceEmpty: "The first team to reach this number wins, e.g. 4 → a 4–2 score.",
-      helpTotal: "Play until both teams' scores add up to {target}. Example score: {a}–{b}.",
-      helpTotalEmpty: "Play until both scores add up to this number, e.g. 24 → a 14–10 score.",
+      helpRace:
+        "The first team to reach {target} points wins. Example score: {target}–{other}.",
+      helpRaceEmpty:
+        "The first team to reach this number wins, e.g. 4 → a 4–2 score.",
+      helpTotal:
+        "Play until both teams' scores add up to {target}. Example score: {a}–{b}.",
+      helpTotalEmpty:
+        "Play until both scores add up to this number, e.g. 24 → a 14–10 score.",
       decrease: "Decrease",
       increase: "Increase",
     },
@@ -164,17 +185,25 @@ export const en: Dictionary = {
       genderOf: "{name}'s gender",
       genderWhy: "Needed so every team has 1 man + 1 woman.",
       emptyTitle: "No players yet",
-      emptyBody: "Paste a list of names (from WhatsApp, for example) or add them one by one.",
+      emptyBody:
+        "Paste a list of names (from WhatsApp, for example) or add them one by one.",
     },
     paste: {
       title: "Paste a list of names",
       label: "One name per line",
-      placeholder: "Putrimut\nBUNA\nNina\n…",
+      placeholder: "John Doe\nAlex Morgan\nRobin Foster\n…",
       hint: "Numbering like “1.” or “-” is removed automatically.",
       detected: { one: "{count} player found", other: "{count} players found" },
-      duplicates: { one: "{count} repeated name", other: "{count} repeated names" },
-      emptyLines: { one: "{count} empty line skipped", other: "{count} empty lines skipped" },
-      tooLong: "Line {line} is too long (max {max} characters) and was not added.",
+      duplicates: {
+        one: "{count} repeated name",
+        other: "{count} repeated names",
+      },
+      emptyLines: {
+        one: "{count} empty line skipped",
+        other: "{count} empty lines skipped",
+      },
+      tooLong:
+        "Line {line} is too long (max {max} characters) and was not added.",
       confirm: { one: "Add {count} player", other: "Add {count} players" },
       nothing: "No names yet",
     },
@@ -226,7 +255,8 @@ export const en: Dictionary = {
     notEnoughWomen: "You need at least {min} women (now {count}).",
     unpairedPlayers: {
       one: "{count} player doesn't have a partner yet. Add one more player, or remove them in the Players step.",
-      other: "{count} players don't have a partner yet. Tap two names to pair them.",
+      other:
+        "{count} players don't have a partner yet. Tap two names to pair them.",
     },
     tooFewTeams: "You need at least {min} teams.",
     byesPerRound: {
@@ -245,7 +275,8 @@ export const en: Dictionary = {
       one: "{count} court stays empty because there aren't enough players.",
       other: "{count} courts stay empty because there aren't enough players.",
     },
-    limitedVariety: "With few players, partners and opponents will repeat often.",
+    limitedVariety:
+      "With few players, partners and opponents will repeat often.",
     fewTeams: {
       one: "Only {count} team, so opponents will repeat often.",
       other: "Only {count} teams, so opponents will repeat often.",
@@ -259,7 +290,8 @@ export const en: Dictionary = {
     tournamentFinished: "This tournament has finished.",
   },
   storage: {
-    quota: "Browser storage is full. Export a backup, then delete old tournaments.",
+    quota:
+      "Browser storage is full. Export a backup, then delete old tournaments.",
     unknown: "Your change wasn't saved yet. Please try again.",
   },
   tournament: {
@@ -286,11 +318,13 @@ export const en: Dictionary = {
       scoreCleared: "Score cleared",
     },
     notes: {
-      partnerRepeat: "Some partners have played together before: new combinations have run out.",
+      partnerRepeat:
+        "Some partners have played together before: new combinations have run out.",
       opponentRepeat: "Some opponents have met before.",
       emptyCourts: "Some courts are empty because there aren't enough players.",
     },
-    pastRound: "This is an earlier round. Changing a score updates the standings, but rounds already drawn stay as they are.",
+    pastRound:
+      "This is an earlier round. Changing a score updates the standings, but rounds already drawn stay as they are.",
     score: {
       title: "Game {n} score",
       save: "Save score",
@@ -312,7 +346,8 @@ export const en: Dictionary = {
       button: "Next round",
       progress: "{done}/{total} games done",
       sheetTitle: "Round {n} isn't finished",
-      sheetBody: "Enter a score or skip each game below first. Skipped games give no points to anyone.",
+      sheetBody:
+        "Enter a score or skip each game below first. Skipped games give no points to anyone.",
       enterScore: "Enter score",
       skip: "Skip",
       ready: "Round {n} is ready!",
@@ -393,7 +428,8 @@ export const en: Dictionary = {
       exportOne: "Export this tournament",
       delete: "Delete tournament",
       deleteTitle: "Delete this tournament?",
-      deleteBody: "\"{name}\" and all its scores will be permanently removed from this device.",
+      deleteBody:
+        '"{name}" and all its scores will be permanently removed from this device.',
       deleteConfirm: "Delete",
       deleted: "Tournament deleted",
       reopen: "Reopen tournament",
@@ -410,7 +446,8 @@ export const en: Dictionary = {
       genderRequired: "Choose Man or Woman.",
       generic: "That didn't work. Please try again.",
     },
-    changedElsewhere: "This tournament was changed in another tab. The view is up to date.",
+    changedElsewhere:
+      "This tournament was changed in another tab. The view is up to date.",
   },
   notFound: {
     title: "404 — Sorry, this isn't available yet",

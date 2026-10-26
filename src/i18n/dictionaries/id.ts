@@ -32,36 +32,52 @@ export const id = {
     themeDark: "Gelap",
     data: "Data",
     exportAll: "Ekspor cadangan",
-    exportHint: "Simpan semua turnamen ke satu file. Berguna sebelum ganti HP atau untuk berjaga-jaga.",
+    exportHint:
+      "Simpan semua turnamen ke satu file. Berguna sebelum ganti HP atau untuk berjaga-jaga.",
     importFile: "Impor cadangan",
     importHint: "Pulihkan dari file cadangan Ponyo Rally (.json).",
     reset: "Hapus semua data",
     resetHint: "Menghapus semua turnamen dan pengaturan di perangkat ini.",
     resetTitle: "Hapus semua data?",
-    resetBody: "Semua turnamen, pengaturan, dan isian yang belum selesai akan dihapus permanen dari perangkat ini. Ekspor cadangan dulu kalau masih dibutuhkan.",
+    resetBody:
+      "Semua turnamen, pengaturan, dan isian yang belum selesai akan dihapus permanen dari perangkat ini. Ekspor cadangan dulu kalau masih dibutuhkan.",
     resetConfirm: "Hapus semua",
     nothingToExport: "Belum ada turnamen untuk diekspor.",
-    exported: { one: "{count} turnamen diekspor", other: "{count} turnamen diekspor" },
+    exported: {
+      one: "{count} turnamen diekspor",
+      other: "{count} turnamen diekspor",
+    },
     importTitle: "Impor cadangan",
-    importSummary: { one: "File ini berisi {count} turnamen.", other: "File ini berisi {count} turnamen." },
-    importConflicts: { one: "{count} di antaranya sudah ada di perangkat ini.", other: "{count} di antaranya sudah ada di perangkat ini." },
+    importSummary: {
+      one: "File ini berisi {count} turnamen.",
+      other: "File ini berisi {count} turnamen.",
+    },
+    importConflicts: {
+      one: "{count} di antaranya sudah ada di perangkat ini.",
+      other: "{count} di antaranya sudah ada di perangkat ini.",
+    },
     importMerge: "Tambahkan yang belum ada",
     importMergeReplace: "Tambahkan dan timpa yang sama",
     importReplaceAll: "Ganti semua data",
     importReplaceAllConfirm: "Ya, hapus yang lain dan ganti",
     importReplaceAllHint: "Turnamen lain di perangkat ini akan dihapus.",
-    imported: { one: "{count} turnamen diimpor", other: "{count} turnamen diimpor" },
+    imported: {
+      one: "{count} turnamen diimpor",
+      other: "{count} turnamen diimpor",
+    },
     importErrors: {
       tooLarge: "File terlalu besar (maks. 5 MB).",
       notJson: "File ini tidak bisa dibaca. Pastikan ini file .json.",
       notBackup: "Ini bukan file cadangan Ponyo Rally.",
-      newerVersion: "File ini dari versi aplikasi yang lebih baru. Perbarui aplikasi dulu.",
+      newerVersion:
+        "File ini dari versi aplikasi yang lebih baru. Perbarui aplikasi dulu.",
       invalid: "Isi file rusak atau tidak lengkap.",
       empty: "File cadangan ini kosong.",
       quota: "Penyimpanan penuh. Hapus turnamen lama lalu coba lagi.",
     },
     corruptTitle: "Ada data yang tidak bisa dibaca",
-    corruptBody: "Data ini disisihkan agar tidak hilang. Unduh untuk disimpan, atau buang.",
+    corruptBody:
+      "Data ini disisihkan agar tidak hilang. Unduh untuk disimpan, atau buang.",
     download: "Unduh",
     discard: "Buang",
     localNote: "Semua data tersimpan di perangkat ini saja, tidak di internet.",
@@ -118,7 +134,8 @@ export const id = {
     create: "Buat permainan",
     startOver: "Mulai dari awal",
     startOverTitle: "Hapus semua isian?",
-    startOverBody: "Format, detail, dan daftar pemain yang sudah diisi akan dihapus.",
+    startOverBody:
+      "Format, detail, dan daftar pemain yang sudah diisi akan dihapus.",
     startOverConfirm: "Hapus isian",
     format: {
       whatsDifferent: "Bedanya apa?",
@@ -142,10 +159,14 @@ export const id = {
       pointsTotal: "Total poin per pertandingan",
       placeholderRace: "Contoh: 4",
       placeholderTotal: "Contoh: 24",
-      helpRace: "Tim yang pertama mencapai {target} poin menang. Contoh skor: {target}–{other}.",
-      helpRaceEmpty: "Tim yang pertama mencapai angka ini menang, misalnya 4 → skor 4–2.",
-      helpTotal: "Main sampai skor kedua tim dijumlah = {target}. Contoh skor: {a}–{b}.",
-      helpTotalEmpty: "Main sampai skor kedua tim dijumlah angka ini, misalnya 24 → skor 14–10.",
+      helpRace:
+        "Tim yang pertama mencapai {target} poin menang. Contoh skor: {target}–{other}.",
+      helpRaceEmpty:
+        "Tim yang pertama mencapai angka ini menang, misalnya 4 → skor 4–2.",
+      helpTotal:
+        "Main sampai skor kedua tim dijumlah = {target}. Contoh skor: {a}–{b}.",
+      helpTotalEmpty:
+        "Main sampai skor kedua tim dijumlah angka ini, misalnya 24 → skor 14–10.",
       decrease: "Kurangi",
       increase: "Tambah",
     },
@@ -161,20 +182,32 @@ export const id = {
       male: "Pria",
       female: "Wanita",
       genderOf: "Jenis kelamin {name}",
-      genderWhy: "Jenis kelamin dibutuhkan agar setiap tim berisi 1 pria + 1 wanita.",
+      genderWhy:
+        "Jenis kelamin dibutuhkan agar setiap tim berisi 1 pria + 1 wanita.",
       emptyTitle: "Belum ada pemain",
-      emptyBody: "Tempel daftar nama (misalnya dari WhatsApp), atau tambah satu per satu.",
+      emptyBody:
+        "Tempel daftar nama (misalnya dari WhatsApp), atau tambah satu per satu.",
     },
     paste: {
       title: "Tempel daftar nama",
       label: "Satu nama per baris",
-      placeholder: "Putrimut\nBUNA\nNina\n…",
+      placeholder: "John Doe\nAlex Morgan\nRobin Foster\n…",
       hint: "Nomor urut seperti “1.” atau “-” dihapus otomatis.",
-      detected: { one: "{count} pemain terdeteksi", other: "{count} pemain terdeteksi" },
+      detected: {
+        one: "{count} pemain terdeteksi",
+        other: "{count} pemain terdeteksi",
+      },
       duplicates: { one: "{count} nama sama", other: "{count} nama sama" },
-      emptyLines: { one: "{count} baris kosong dilewati", other: "{count} baris kosong dilewati" },
-      tooLong: "Baris {line} terlalu panjang (maks. {max} huruf) dan tidak ditambahkan.",
-      confirm: { one: "Tambahkan {count} pemain", other: "Tambahkan {count} pemain" },
+      emptyLines: {
+        one: "{count} baris kosong dilewati",
+        other: "{count} baris kosong dilewati",
+      },
+      tooLong:
+        "Baris {line} terlalu panjang (maks. {max} huruf) dan tidak ditambahkan.",
+      confirm: {
+        one: "Tambahkan {count} pemain",
+        other: "Tambahkan {count} pemain",
+      },
       nothing: "Belum ada nama",
     },
     teams: {
@@ -225,7 +258,8 @@ export const id = {
     notEnoughWomen: "Butuh minimal {min} wanita (sekarang {count}).",
     unpairedPlayers: {
       one: "{count} pemain belum punya pasangan. Tambah 1 pemain lagi, atau hapus dia di langkah Pemain.",
-      other: "{count} pemain belum punya pasangan. Ketuk dua nama untuk memasangkan.",
+      other:
+        "{count} pemain belum punya pasangan. Ketuk dua nama untuk memasangkan.",
     },
     tooFewTeams: "Butuh minimal {min} tim.",
     byesPerRound: {
@@ -244,7 +278,8 @@ export const id = {
       one: "{count} lapangan tidak terpakai karena pemain belum cukup.",
       other: "{count} lapangan tidak terpakai karena pemain belum cukup.",
     },
-    limitedVariety: "Pemainnya sedikit, jadi pasangan dan lawan akan sering berulang.",
+    limitedVariety:
+      "Pemainnya sedikit, jadi pasangan dan lawan akan sering berulang.",
     fewTeams: {
       one: "Hanya {count} tim, jadi lawan akan sering berulang.",
       other: "Hanya {count} tim, jadi lawan akan sering berulang.",
@@ -254,11 +289,13 @@ export const id = {
     notEnoughPlayers: "Pemain yang bisa main belum cukup.",
     notEnoughMen: "Pria yang bisa main belum cukup.",
     notEnoughWomen: "Wanita yang bisa main belum cukup.",
-    previousRoundIncomplete: "Selesaikan atau lewati semua pertandingan di ronde ini dulu.",
+    previousRoundIncomplete:
+      "Selesaikan atau lewati semua pertandingan di ronde ini dulu.",
     tournamentFinished: "Turnamen ini sudah selesai.",
   },
   storage: {
-    quota: "Penyimpanan browser penuh. Ekspor cadangan lalu hapus turnamen lama.",
+    quota:
+      "Penyimpanan browser penuh. Ekspor cadangan lalu hapus turnamen lama.",
     unknown: "Perubahan belum tersimpan. Coba lagi.",
   },
   tournament: {
@@ -270,7 +307,11 @@ export const id = {
     backHome: "Ke beranda",
     subtitle: "{format} · Ronde {n}",
     tabsLabel: "Bagian turnamen",
-    tabs: { matches: "Pertandingan", leaderboard: "Klasemen", players: "Pemain" },
+    tabs: {
+      matches: "Pertandingan",
+      leaderboard: "Klasemen",
+      players: "Pemain",
+    },
     roundsLabel: "Pilih ronde",
     status: { pending: "Belum", complete: "Selesai", skipped: "Dilewati" },
     vs: "VS",
@@ -285,15 +326,18 @@ export const id = {
       scoreCleared: "Skor dihapus",
     },
     notes: {
-      partnerRepeat: "Ada pasangan yang pernah main bareng di ronde ini, karena kombinasi baru sudah habis.",
+      partnerRepeat:
+        "Ada pasangan yang pernah main bareng di ronde ini, karena kombinasi baru sudah habis.",
       opponentRepeat: "Ada lawan yang pernah bertemu sebelumnya.",
       emptyCourts: "Sebagian lapangan kosong karena pemain belum cukup.",
     },
-    pastRound: "Ini ronde lama. Mengubah skor akan memperbarui klasemen, tapi ronde yang sudah dibuat tidak berubah.",
+    pastRound:
+      "Ini ronde lama. Mengubah skor akan memperbarui klasemen, tapi ronde yang sudah dibuat tidak berubah.",
     score: {
       title: "Skor game {n}",
       save: "Simpan skor",
-      hintRace: "Pertama capai {n}. Isi skor yang kalah, skor pemenang terisi otomatis.",
+      hintRace:
+        "Pertama capai {n}. Isi skor yang kalah, skor pemenang terisi otomatis.",
       hintTotal: "Total {n}. Isi satu skor, skor lawan terisi otomatis.",
       editSide: "Isi skor {name}",
       backspace: "Hapus angka",
@@ -311,7 +355,8 @@ export const id = {
       button: "Ronde berikutnya",
       progress: "{done}/{total} game selesai",
       sheetTitle: "Ronde {n} belum selesai",
-      sheetBody: "Isi skor atau lewati game di bawah ini dulu. Game yang dilewati tidak menambah poin siapa pun.",
+      sheetBody:
+        "Isi skor atau lewati game di bawah ini dulu. Game yang dilewati tidak menambah poin siapa pun.",
       enterScore: "Isi skor",
       skip: "Lewati",
       ready: "Ronde {n} siap!",
@@ -392,7 +437,8 @@ export const id = {
       exportOne: "Ekspor turnamen ini",
       delete: "Hapus turnamen",
       deleteTitle: "Hapus turnamen ini?",
-      deleteBody: "\"{name}\" dan semua skornya akan dihapus permanen dari perangkat ini.",
+      deleteBody:
+        '"{name}" dan semua skornya akan dihapus permanen dari perangkat ini.',
       deleteConfirm: "Hapus",
       deleted: "Turnamen dihapus",
       reopen: "Buka lagi turnamen",
@@ -402,14 +448,16 @@ export const id = {
       genderMismatch: "Harus diganti dengan pemain berjenis kelamin sama.",
       unknownPlayer: "Pemain ini tidak bisa main.",
       alreadyInMatch: "Pemain ini sudah ada di game ini.",
-      roundStarted: "Ronde ini sudah ada skornya, jadi tidak bisa diacak ulang.",
+      roundStarted:
+        "Ronde ini sudah ada skornya, jadi tidak bisa diacak ulang.",
       stale: "Ronde baru sudah dibuat.",
       nameRequired: "Isi nama dulu.",
       nameTooLong: "Nama terlalu panjang.",
       genderRequired: "Pilih Pria atau Wanita.",
       generic: "Belum bisa. Coba lagi.",
     },
-    changedElsewhere: "Turnamen ini diubah di tab lain. Tampilan sudah diperbarui.",
+    changedElsewhere:
+      "Turnamen ini diubah di tab lain. Tampilan sudah diperbarui.",
   },
   notFound: {
     title: "404 — Maaf, fitur belum tersedia",

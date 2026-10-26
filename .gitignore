@@ -39,3 +39,37 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# AI assistants and coding agents (local config, prompts, caches)
+.claude/
+CLAUDE.md
+CLAUDE.local.md
+AGENTS.md
+.qodo/
+.cursor/
+.cursorrules
+.cursorignore
+.windsurf/
+.windsurfrules
+.aider*
+.continue/
+.codeium/
+.copilot/
+.github/copilot-instructions.md
+.gemini/
+GEMINI.md
+.codex/
+.roo/
+.clinerules
+.cline/
+.kiro/
+.junie/
+.tabnine/
+graphify-out/
+*.prompt.md
+
+# playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
