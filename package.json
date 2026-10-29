@@ -11,7 +11,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:e2e": "playwright test",
-    "preview": "node scripts/serve-static.mjs out 4173"
+    "preview": "node scripts/serve-static.mjs out 4173",
+    "poster": "node scripts/poster/render-poster.mjs --url https://ponyorally.netlify.app"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
@@ -30,6 +31,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.4.3",
+    "qrcode": "^1.5.4",
     "tailwindcss": "^4",
     "typescript": "^5",
     "vitest": "^4.1.12"

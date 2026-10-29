@@ -1,11 +1,12 @@
 "use client";
 
-import { ArrowDownIcon, ArrowUpIcon, TrophyIcon } from "@heroicons/react/20/solid";
+import { ArrowDownIcon, ArrowUpIcon, ShareIcon, TrophyIcon } from "@heroicons/react/20/solid";
 import { useMemo, useState } from "react";
 import { Segmented } from "@/components/ui/Segmented";
 import { computeStandings, type StandingRow } from "@/domain/standings";
 import { useT } from "@/i18n/useT";
 import type { TournamentScreenModel } from "../useTournamentScreen";
+import { ShareSheet } from "../share/ShareSheet";
 import { Podium } from "./Podium";
 import { RankBadge } from "./RankBadge";
 
@@ -21,6 +22,7 @@ export function LeaderboardTab({ model }: { model: TournamentScreenModel }) {
   const { t, tp } = useT();
   const { tournament, names } = model;
   const [view, setView] = useState<View>("compact");
+  const [sharing, setSharing] = useState(false);
 
   const rows = useMemo(() => computeStandings(tournament), [tournament]);
   const changes = useMemo(
@@ -44,13 +46,24 @@ export function LeaderboardTab({ model }: { model: TournamentScreenModel }) {
   return (
     <div className="flex flex-col gap-4">
       <section className="overflow-hidden rounded-card bg-brand-surface px-4 pt-4 shadow-card">
-        <header className="mb-4 flex items-baseline justify-between gap-2">
-          <h2 className="text-lg font-bold text-on-brand">
-            {model.finished ? t("tournament.leaderboard.champion") : t("tournament.tabs.leaderboard")}
-          </h2>
-          <p className="text-on-brand-muted text-sm">
-            {t("tournament.leaderboard.after", { n: tournament.rounds.length })}
-          </p>
+        <header className="mb-4 flex items-start justify-between gap-3">
+          <div className="min-w-0">
+            <h2 className="text-lg font-bold text-on-brand">
+              {model.finished ? t("tournament.leaderboard.champion") : t("tournament.tabs.leaderboard")}
+            </h2>
+            <p className="text-on-brand-muted text-sm">
+              {t("tournament.leaderboard.after", { n: tournament.rounds.length })}
+            </p>
+          </div>
+          <button
+            type="button"
+            onClick={() => setSharing(true)}
+            aria-label={t("share.openLabel")}
+            className="inline-flex min-h-11 shrink-0 items-center gap-2 rounded-full bg-accent px-4 text-sm font-bold text-accent-fg transition-transform duration-120 active:scale-95"
+          >
+            <ShareIcon className="size-4.5" aria-hidden="true" />
+            {t("share.open")}
+          </button>
         </header>
         <Podium rows={rows.slice(0, 3)} name={names.entry} pointsLabel={pointsLabel} />
       </section>
@@ -81,6 +94,10 @@ export function LeaderboardTab({ model }: { model: TournamentScreenModel }) {
           />
         ))}
       </ol>
+
+      {sharing && (
+        <ShareSheet tournament={tournament} rows={rows} entryName={names.entry} onClose={() => setSharing(false)} />
+      )}
     </div>
   );
 }
